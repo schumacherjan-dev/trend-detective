@@ -179,6 +179,8 @@ All external data are used with attribution. The author processed them (country 
 | Natural Earth | land outlines, country assignment | public domain |
 | GeoNames | place names for city search and cell descriptions | CC BY 4.0 |
 | Python libraries NumPy, pandas, SciPy | analysis | BSD licences |
+| Warming stripes idea: Ed Hawkins (University of Reading), https://showyourstripes.info | idea for the one-bar-per-year stripes; own implementation, own data | idea credited, no graphics copied |
+| Statistical methods: Theil–Sen estimator, Mann–Kendall test, Benjamini–Hochberg procedure | trends, significance, FDR | standard methods, implemented with SciPy/NumPy |
 
 Reference values for the world and Europe on the page (about 1.4 °C, "twice as fast") come from the Copernicus Climate Change Service / WMO report *European State of the Climate 2025* and are linked, not copied.
 

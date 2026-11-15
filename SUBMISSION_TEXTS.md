@@ -30,6 +30,7 @@ The question, the concept and every decision on what to build or to exclude are 
 - Met Office UK and regional series (Open Government Licence v3.0, Crown copyright): UK temperature, precipitation, sunshine
 - Met Éireann via CSO PxStat table MTM01 (CC BY 4.0): Ireland monthly rainfall, 8 stations
 - Berkeley Earth regional temperature series (CC BY-NC 4.0, non-commercial use; www.berkeleyearth.org): Spain, Italy, Greece, Finland, Norway, Latvia, Lithuania
+- Warming stripes idea: Ed Hawkins, showyourstripes.info (idea credited; own implementation with own data)
 - Natural Earth land outlines (public domain)
 - GeoNames place names (CC BY 4.0)
 - Python libraries NumPy, pandas, SciPy (BSD licences)
