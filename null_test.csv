@@ -1,0 +1,13 @@
+variable,mode,cells,raw_sig_pct_mean,raw_sig_pct_p5,raw_sig_pct_p95,fdr_sig_cells_mean,fdr_sig_cells_max,runs_with_any_fdr_pct
+T2M,same_perm,315,5.822,0.0,29.286,0.0,0.0,0.0
+T2M,indep,315,5.006,2.857,7.302,0.03,1.0,3.0
+PRECTOTCORR,same_perm,315,5.279,1.27,10.476,0.12,5.0,4.0
+PRECTOTCORR,indep,315,4.79,2.857,7.302,0.02,1.0,2.0
+GWETROOT,same_perm,232,5.31,0.862,11.703,0.08,4.0,5.0
+GWETROOT,indep,232,4.94,2.565,6.897,0.07,1.0,7.0
+QV2M,same_perm,315,4.381,0.0,16.238,1.73,156.0,2.0
+QV2M,indep,315,5.051,3.476,6.984,0.03,2.0,2.0
+RH2M,same_perm,315,4.337,0.952,11.778,0.27,15.0,4.0
+RH2M,indep,315,5.162,3.175,7.317,0.03,1.0,3.0
+ALLSKY_SFC_SW_DWN,same_perm,315,4.66,0.619,15.794,0.78,29.0,6.0
+ALLSKY_SFC_SW_DWN,indep,315,4.825,2.857,6.984,0.0,0.0,0.0
