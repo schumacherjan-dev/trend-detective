@@ -416,7 +416,7 @@
 .vside { border:1px solid #e3e7eb; border-radius:16px; padding:18px 20px; background:#fafbfc; font-size:14px; line-height:1.45; }
 .vbig { font-size:2.2rem; font-weight:700; line-height:1.1; color:var(--ink); }
 .vlbl { color:var(--muted); font-size:13px; margin-bottom:14px; }
-.vrow { display:flex; gap:10px; align-items:flex-start; margin:10px 0; }
+.vmrow { display:flex; gap:10px; align-items:flex-start; margin:10px 0; }
 .vdot { flex:0 0 10px; height:10px; border-radius:50%; margin-top:5px; }
 .vsrc { margin-top:14px; padding-top:12px; border-top:1px solid #e3e7eb; color:var(--muted); font-size:13px; }
 @media (max-width:900px) { .vgrid { grid-template-columns:1fr; } .vgroup { flex-direction:column; gap:2px; } .vgroup .vglab { padding-top:0; flex:none; } .vgroup .presets { flex:none; } }
@@ -428,7 +428,7 @@
 @media (max-width:560px) { .qsteps { grid-template-columns:1fr; } }
 html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } html[data-theme="dark"] .vsrc { border-color:#2f3a49; }
 
-.winbar { display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin:0 0 10px; padding:10px 16px; border:1px solid var(--line,#e3e7eb); border-radius:999px; background:var(--card,#fff); }
+.winbar { display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin:0 0 8px; padding:5px 14px; border:1px solid var(--line,#e3e7eb); border-radius:999px; background:var(--card,#fff); }
 .winbar[hidden] { display:none; }
 .winbar .wbl { font-size:13px; color:var(--muted); white-space:nowrap; }
 .winbar .wbl b { color:var(--ink); margin-right:6px; }
@@ -436,6 +436,61 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
 .winbar button { border-radius:999px; padding:6px 14px; }
 .winbar .wbn { font-size:12px; color:#9a3b12; }
 @media (max-width:560px) { .winbar { border-radius:18px; } }
+
+
+.card .presetnote { margin:0 0 10px; flex-basis:auto; max-width:none; }
+.presetnote .nbody.clamp { max-height:4.5em; overflow:hidden; -webkit-mask-image:linear-gradient(#000 60%, transparent); mask-image:linear-gradient(#000 60%, transparent); }
+.presetnote .notemore { margin:4px 0 0; padding:3px 12px; font-size:.78rem; border-radius:999px; }
+.how { list-style:none; margin:10px 0 0; padding:0; display:flex; flex-wrap:wrap; gap:6px 6px; }
+.how li { display:flex; align-items:center; gap:8px; font-size:.82rem; color:var(--muted); line-height:1.3; padding:4px 12px 4px 5px; border:1px solid var(--line,#e3e7eb); border-radius:999px; }
+.how li i { flex:0 0 20px; height:20px; border-radius:50%; background:var(--ink); color:var(--bg,#fff); font-style:normal; font-size:.72rem; font-weight:700; display:flex; align-items:center; justify-content:center; }
+.how li b { color:var(--ink); font-weight:650; }
+html[data-theme="dark"] .how li i { background:#ececec; color:#111; }
+@media (max-width:560px) { .how { display:none; } }
+.headline .expchip { display:inline-block; margin-top:4px; padding:2px 10px; border-radius:999px; background:#fff3d6; color:#7a4b00; font-size:.8rem; line-height:1.4; }
+html[data-theme="dark"] .headline .expchip { background:#3a3118; color:#f1c76b; }
+.who { margin:0 22px 22px; } .who h2 { margin:0 0 8px; font-size:1.05rem; }
+.whogrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.whocard { border:1px solid var(--line,#e3e7eb); border-radius:20px; padding:16px 18px; background:var(--card,#fff); display:flex; flex-direction:column; gap:6px; box-shadow:0 1px 2px rgba(0,0,0,.03), 0 6px 22px rgba(0,0,0,.04); }
+.whocard b { font-size:1rem; } .whocard p { margin:0 0 6px; font-size:.88rem; line-height:1.5; color:var(--muted); flex:1; }
+.whocard button { align-self:flex-start; border-radius:999px; padding:7px 16px; }
+.who .note { margin:8px 2px 0; }
+main > .card:first-child { scroll-margin-top:96px; }
+@media (max-width:900px) { .whogrid { grid-template-columns:1fr; } .who { margin:0 12px 18px; } }
+html[data-theme="dark"] .whocard { box-shadow:none; }
+.uses { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:8px 0 0; }
+.uses .ulab { font-size:.8rem; color:var(--muted); margin-right:2px; }
+.uses button { border-radius:999px; padding:4px 13px; font-size:.82rem; }
+/* ===== layout D: map first ===== */
+header { padding:18px 22px 6px; }
+.hwrap { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr); gap:10px 36px; align-items:end; }
+.hleft .eyebrow { margin-bottom:2px; }
+.hleft h1 { margin:0 0 4px; }
+.tagline .tl1, .tagline .tl2 { font-size:1.22rem; }
+.hleft .tagline { margin:0 0 6px; }
+.hleft .sub { font-size:.9rem; }
+.hright { padding:0 0 4px; }
+.hright .herostripes { margin:0; max-width:none; }
+.hright .herostripes svg { height:56px; }
+@media (max-width:900px) { .hwrap { grid-template-columns:1fr; } .hright .herostripes svg { height:34px; } }
+.starts { padding:6px 22px 2px; }
+.tiles { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+.tile { display:flex; flex-direction:column; align-items:flex-start; gap:2px; text-align:left; border:1px solid var(--line,#e3e7eb); border-radius:16px; padding:10px 14px; background:var(--card,#fff); cursor:pointer; font:inherit; color:var(--ink); transition:border-color .15s, box-shadow .15s; }
+.tile b { font-size:.95rem; font-weight:650; }
+.tile span { font-size:.8rem; color:var(--muted); line-height:1.35; }
+.tile:hover { border-color:#222; box-shadow:0 2px 10px rgba(0,0,0,.07); }
+.tile.active { background:#222; border-color:#222; } .tile.active b, .tile.active span { color:#fff !important; }
+.tilemore { background:transparent; border-style:dashed; }
+.tilemore i { font-style:normal; display:inline-block; transition:transform .2s; } .tilemore[aria-expanded="true"] i { transform:rotate(180deg); }
+.starts .examples { padding:12px 0 2px; }
+.examples[hidden] { display:none; }
+html[data-theme="dark"] .tile { background:#171e26; border-color:#34404c; } html[data-theme="dark"] .tilemore { background:transparent; }
+html[data-theme="dark"] .tile:hover { border-color:#ececec; }
+html[data-theme="dark"] .tile.active { background:#ececec; border-color:#ececec; } html[data-theme="dark"] .tile.active b, html[data-theme="dark"] .tile.active span { color:#111 !important; }
+.starts .presetnote { margin:10px 0 0; }
+.qstart { margin:0 22px 22px; padding:0; } .qstart h2 { margin:0 0 6px; font-size:1.05rem; }
+@media (max-width:900px) { .tiles { grid-template-columns:1fr 1fr; } .starts { padding:6px 12px 2px; } .qstart { margin:0 12px 18px; } }
+@media (max-width:560px) { .tile { padding:8px 10px; } .tile b { font-size:.86rem; } .tile span { display:none; } }
 </style>
 </head>
 
@@ -443,11 +498,21 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
 
 <header>
   <button type="button" id="themebtn" aria-label="Switch between light and dark mode">Dark mode</button>
-  <div class="eyebrow">NASA Space Apps 2026 · Be An Earth System Trend Detective! · Europe</div>
-  <h1>Trend Detective</h1>
-  <p class="tagline"><span class="tl1">Most tools show what changed.</span><br><span class="tl2">Trend Detective shows how long you need to wait before you can trust it.</span></p>
-  <p class="sub">NASA POWER data, 1981–2024, 315 grid cells over Europe. Pick a case, or choose a variable and click a cell.</p>
-  <div class="herostripes" id="herostripes" aria-label="Warming stripes for Europe"></div>
+  <div class="hwrap">
+    <div class="hleft">
+      <div class="eyebrow">NASA Space Apps 2026 · Be An Earth System Trend Detective! · Europe</div>
+      <h1>Trend Detective</h1>
+      <p class="tagline"><span class="tl1">Most tools show what changed.</span><br><span class="tl2">Trend Detective shows how long you need to wait before you can trust it.</span></p>
+      <p class="sub">NASA POWER data, 1981–2024, 315 grid cells over Europe.</p>
+      <ol class="how" aria-label="How it works">
+        <li><i>1</i><span><b>Pick a case</b></span></li>
+        <li><i>2</i><span><b>Click a cell</b> or search a town</span></li>
+        <li><i>3</i><span><b>Switch the view</b></span></li>
+        <li><i>4</i><span><b>Make it personal</b></span></li>
+      </ol>
+    </div>
+    <div class="hright"><div class="herostripes" id="herostripes" aria-label="Warming stripes for Europe"></div></div>
+  </div>
 </header>
 
 <div class="loadnote" id="loadnote" role="status"><span class="spin" aria-hidden="true"></span>Loading 44 years of climate data for 315 grid cells …</div>
@@ -504,7 +569,14 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
   <div id="citymsg">Towns above 15,000. Smaller places: click the map. Then add your birth year in the panel.</div>
 </section>
 
-<section class="examples" aria-label="Example questions">
+<section class="starts" aria-label="Start here">
+  <div class="tiles">
+    <button type="button" class="tile" data-preset="warm"><b>How fast is warming detectable?</b><span>Air temperature across Europe</span></button>
+    <button type="button" class="tile" data-preset="rain"><b>Where is rain still hidden?</b><span>Is <span class="js-n">44</span> years of data enough?</span></button>
+    <button type="button" class="tile" data-case="atl"><b>Compare two places</b><span>Dublin vs. Warsaw: coast vs. inland</span></button>
+    <button type="button" class="tile tilemore" id="morebtn" aria-expanded="false" aria-controls="morepanel"><b>More cases <i aria-hidden="true">▾</i></b><span>Hot days, winter, Oslo, compare more …</span></button>
+  </div>
+  <div class="examples" id="morepanel" hidden aria-label="More cases">
   <span class="title">Start with a case:</span>
   <div class="presets grid4">
     <button type="button" data-preset="warm">Warming: how fast is it detectable?</button>
@@ -533,22 +605,14 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
       <button type="button" data-preset="wet">Wet and dry months: any change?</button>
     </div>
   </details>
-  <div class="qstart">
-    <span class="title" style="display:block;margin-top:14px">Quick start in 30 seconds:</span>
-    <ol class="qsteps">
-      <li><b>1 · Pick a case.</b> Click one above, for example “Warming: how fast is it detectable?”. The map and a short explanation change.</li>
-      <li><b>2 · Choose a place.</b> Click a cell on the map or search your town. The right-hand panel shows the yearly values, the trend and “Your place” in plain words.</li>
-      <li><b>3 · Switch the view.</b> “Years needed” or “Year the trend became detectable” show how long it took before the trend was clear.</li>
-      <li><b>4 · Make it personal.</b> Enter a change you care about under “How long would I have to measure here?” and your birth year under “Your place”.</li>
-    </ol>
   </div>
-  <div class="presetnote" id="presetnote" aria-live="polite" hidden></div>
 </section>
 
 <main>
   <section class="card">
     <h2 id="maptitle">Map</h2>
     <p class="headline" id="headline" aria-live="polite"></p>
+    <div class="presetnote" id="presetnote" aria-live="polite" hidden></div>
     <p class="note acwarn" id="acwarn" aria-live="polite" hidden></p>
     <div class="maptools">
       <label class="tg"><input type="checkbox" id="towns" checked> Towns</label>
@@ -586,7 +650,7 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
     <div class="bctl">
       <label>Variable<select id="varB"></select></label>
       <label>Season<select id="seasonB"></select></label>
-      <label>View<select id="viewB"><option value="trend">Trend per decade</option><option value="horizon">Years needed for a significant trend</option><option value="emerge">Year the trend became detectable</option><option value="combo">Warming vs. precipitation</option></select></label>
+      <label>View<select id="viewB"><option value="trend">Trend per decade</option><option value="horizon">Years needed for a significant trend</option><option value="emerge">Year the trend became detectable</option><option value="combo">Warming and rain, side by side</option></select></label>
       <label id="winctlB">Time window: <span id="winB"></span><input type="range" id="startB" min="0" step="1"></label>
       <button type="button" id="swapB" title="Exchange map A and map B">⇄ Swap A and B</button>
       <button type="button" id="closeB">Close second map</button>
@@ -626,13 +690,23 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
         <li>Soil moisture is not defined over the sea, so those cells stay empty.</li>
         <li>Sunshine at the ground comes from two satellite products (SRB until 2000, CERES from 2001). Over Germany, POWER sits about 0.2 MJ/m²/day lower before 2001 than a fit to the DWD sunshine hours predicts, so part of its upward trend may come from the switch. Treat its trend as less certain than temperature.</li>
         <li>Neighbouring cells see the same weather and are not independent. “315 of 315 cells” is therefore not 315 independent confirmations. The FDR correction handles many tests, not this dependence.</li>
-        <li>Cells are point samples every 2.5° (roughly 200–280 km). Mountains and coastlines are smoothed, so local values can be milder or stronger than at a weather station.</li>
+        <li>Cells are point samples every 2.5° (roughly 100–280 km). Mountains and coastlines are smoothed, so local values can be milder or stronger than at a weather station.</li>
         <li>Land and sea are separated in the regional averages, but a 2.5° cell counts as land if its grid point lies on land, so coastal cells are approximate.</li>
         <li>The 95 % range shown for a slope ignores autocorrelation. A separate check that allows for year-to-year autocorrelation (script <code>autocorr_check.py</code> in the project repository) shows which results survive it: soil moisture and relative humidity mostly do not.</li>
       </ul>
     </details>
   </section>
 </main>
+
+  <section class="who" id="who" aria-label="Who is this for">
+    <h2>Who is this for?</h2>
+    <div class="whogrid">
+      <div class="whocard"><b>Teachers and students</b><p>“Why are ten years of weather not climate?” The Oslo example shows how a short window can show cooling although the long trend is warming.</p><button type="button" data-who="case:short">Try the Oslo example</button></div>
+      <div class="whocard"><b>Water managers and farmers</b><p>“Is rainfall changing here, or is it noise?” Most rainfall trends are still hidden in natural swings, and the map shows where.</p><button type="button" data-who="preset:rain">See where rain trends are hidden</button></div>
+      <div class="whocard"><b>City planners</b><p>“How many years of data does a warming trend need in my region?” Choose a place and see when the trend became reliable.</p><button type="button" data-who="preset:warm">Start with warming</button></div>
+    </div>
+    <p class="note">These are example uses, not tested with real users yet.</p>
+  </section>
 
 <h2 class="sect">Key findings</h2>
 <section class="findings" id="findings" aria-label="Key findings"></section>
@@ -690,7 +764,7 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
     <tr><td>Germany, sunshine</td><td>DWD sunshine duration</td><td style="white-space:nowrap">1984–2024</td><td class="r">0.91</td><td>+3.8 % vs. +2.4 % (relative)</td></tr>
     <tr><td>United Kingdom, sunshine</td><td>Met Office sunshine duration</td><td style="white-space:nowrap">1984–2024</td><td class="r">0.75</td><td>+2.2 % vs. +2.1 % (relative)</td></tr>
   </table></div>
-  <p class="note">Temperature matches well, and the trends agree within 0.1 °C per decade (largest difference: Italy, 0.09 °C). Precipitation matches in its yearly swings (r = 0.85 in Germany, 0.90 in the UK), but the direction of the trend agrees in the UK and not in Germany, so with two countries checked its colours should still be read with care. These are country means or averages of the grid points inside a country, not single stations. A single station is usually noisier than a smoothed grid cell, so a local user may need more years than the map shows; we did not test this.</p>
+  <p class="note">Temperature matches well: the trends agree within 0.1 °C per decade in eight of nine countries or regions, and the largest difference is 0.16 °C per decade (Norway, +0.48 measured vs. +0.32 POWER). Precipitation matches in its yearly swings (r = 0.85 in Germany, 0.90 in the UK, 0.89 in Ireland), but the direction of the trend agrees in the UK and Ireland and not in Germany, so with three countries checked its colours should still be read with care. These are country means or averages of the grid points inside a country, not single stations. A single station is usually noisier than a smoothed grid cell, so a local user may need more years than the map shows; we did not test this.</p>
 </section>
 
 <section class="card" style="margin:0 22px 22px">
@@ -953,7 +1027,7 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
     clearPreset(); listEl.hidden = true; searchIn.value = x.n; searchIn.setAttribute("aria-expanded", "false");
     var cell = cellAt(x.lat, x.lon), second = state.cmp && state.sel && !state.sel.region;
     if (second) state.sel2 = cell; else { state.sel = cell; if (!state.cmp) state.sel2 = null; }
-    cityMsg.textContent = x.n + " lies in the 2.5° cell centred on " + latTxt(cell.lat) + ", " + lonTxt(cell.lon) + (second ? " (shown as B)" : "") + ". The map gives one value for the whole cell, about 200–280 km wide.";
+    cityMsg.textContent = x.n + " lies in the 2.5° cell centred on " + latTxt(cell.lat) + ", " + lonTxt(cell.lon) + (second ? " (shown as B)" : "") + ". The map gives one value for the whole cell, about 100–280 km wide.";
     render(); nudgeToCell(cell.lat, cell.lon);   // no automatic scrolling: choosing the place is only step 2 of 4 in the bar
     setTimeout(function () {   // lead the eye to the next step: the birth year (desktop only, so no keyboard pops up on phones)
       var lb = document.getElementById("lifebox"); if (!lb) return;
@@ -1017,7 +1091,14 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
     state.view = v;
     Array.prototype.forEach.call(document.getElementsByName("view"), function (r) { r.checked = r.value === v; });
   }
-  var activePreset = null;
+  var activePreset = null, noteKey = null, noteOpen = false;
+  function decorateNote(pn, html, key) {   // long explanations stay short at first, so the map stays on the first screen
+    if (key !== noteKey) { noteKey = key; noteOpen = false; }
+    pn.innerHTML = '<div class="nbody' + (noteOpen ? "" : " clamp") + '">' + html + '</div><button type="button" class="notemore">' + (noteOpen ? "Show less" : "Read more") + "</button>";
+    var nb = pn.querySelector(".nbody"), bt = pn.querySelector(".notemore");
+    bt.hidden = !noteOpen && nb.scrollHeight <= nb.clientHeight + 2 && false;
+    bt.addEventListener("click", function () { noteOpen = !noteOpen; nb.classList.toggle("clamp", !noteOpen); bt.textContent = noteOpen ? "Show less" : "Read more"; });
+  }
   function clearPreset() { activePreset = null; }
   var PRESETS = {
     warm:  function () { setSeason("year"); state.variable = "T2M"; setView("horizon"); state.startIdx = 0; state.fdr = true; },
@@ -1210,6 +1291,12 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
     if (!g) return; while (g.firstChild) g.removeChild(g.firstChild);
     if (!c) return;
     var x0 = X(c.lon - step / 2), x1 = X(c.lon + step / 2), y0 = Y(c.lat + step / 2), y1 = Y(c.lat - step / 2);
+    var big = g === gHov && [state.sel, state.cmp ? state.sel2 : null].some(function (q) { return q && !q.region && q.lat === c.lat && q.lon === c.lon; });
+    if (big) {   // a selected cell is drawn larger on map A ("pop"): the hover frame follows that size
+      var pw = (x1 - x0) * 0.22, ph = (y1 - y0) * 0.22;
+      el("rect", { x: x0 - pw, y: y0 - ph, width: x1 - x0 + 2 * pw, height: y1 - y0 + 2 * ph, rx: 2, fill: "none", stroke: "#111", "stroke-width": 2 }, g);
+      return;
+    }
     el("rect", { x: x0 + 0.6, y: y0 + 0.6, width: x1 - x0 - 1.2, height: y1 - y0 - 1.2, fill: "none", stroke: "#111", "stroke-width": 2 }, g);
   }
   var stateB = null, svgB = null, gCellsB = null, gDotsB = null, gSelB = null, pendingB = null;
@@ -1291,7 +1378,12 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
     if (state.view === "horizon") return name + ": half of the places with a significant trend needed <b>" + (med !== null ? med : "?") + " years</b> of data or fewer" + (N - n > 0 ? "; in <b>" + (N - n) + " of " + N + " cells</b> even " + W + " years are not enough." : ".");
     return name + ": <b>" + n + " of " + N + " cells</b> " + (n === 1 ? "shows" : "show") + " a significant trend in " + per + (med !== null ? "; half of them needed <b>" + med + " years</b> of data or fewer to be clearly detectable." : ".");
   }
-  function renderHeadline() { var e = document.getElementById("headline"); if (e) { var t = headlineText(); e.innerHTML = t; e.hidden = !t; } }
+  function renderHeadline() {
+    var e = document.getElementById("headline"); if (!e) return;
+    var t = headlineText();
+    if (t && state.view !== "combo" && /^D_/.test(state.variable)) t += ' <span class="expchip">Experimental: modelled daily values, not validated against stations.</span>';
+    e.innerHTML = t; e.hidden = !t;
+  }
 
   function render() {
     var combo = state.view === "combo", emg = state.view === "emerge";
@@ -1325,10 +1417,25 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
     renderLegend(); renderSel(); renderDetail(); renderNumbers(); renderRegions(); renderScatter(); renderEmerge(); emUI(); kbDraw(); renderB();
     Array.prototype.forEach.call(document.querySelectorAll("[data-preset]"), function (b) { b.classList.toggle("active", b.getAttribute("data-preset") === activePreset); });
     Array.prototype.forEach.call(document.querySelectorAll("[data-case]"), function (b) { b.classList.toggle("active", "case_" + b.getAttribute("data-case") === activePreset); });
-    var pn = document.getElementById("presetnote"); pn.hidden = !activePreset; if (activePreset) pn.innerHTML = presetNote(activePreset);
+    var pn = document.getElementById("presetnote"); pn.hidden = !activePreset; if (activePreset) decorateNote(pn, presetNote(activePreset), activePreset);
     renderAcWarn(); updateCmpUI(); syncSearch();
     writeHash();
   }
+
+  (function () {   // "More cases" opens the full list of cases and comparisons
+    var mb = document.getElementById("morebtn"), mp = document.getElementById("morepanel");
+    mb.addEventListener("click", function () { var open = mp.hidden; mp.hidden = !open; mb.setAttribute("aria-expanded", open ? "true" : "false"); });
+  })();
+
+  (function () {   // "Who is this for?": each card opens one existing case and brings the map into view
+    Array.prototype.forEach.call(document.querySelectorAll("[data-who]"), function (b) {
+      b.addEventListener("click", function () {
+        var p = b.getAttribute("data-who").split(":"), t = document.querySelector("[data-" + p[0] + "=" + p[1] + "]");
+        if (t) t.click();
+        var c = document.querySelector("main > .card"); if (c) setTimeout(function () { c.scrollIntoView({ block: "start", behavior: "smooth" }); }, 60);
+      });
+    });
+  })();
 
   // ---------- measured vs. POWER overlay ----------
   (function () {
@@ -1365,8 +1472,8 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
       ch.innerHTML = g;
       var u = c.unit === "% of the mean" ? "% per decade" : c.unit === "mm per year" ? "mm/year per decade" : c.unit + " per decade";
       tx.innerHTML = "<div class='vbig'>r = " + c.r.toFixed(2) + "</div><div class='vlbl'>match of the yearly values</div>" +
-        "<div class='vrow'><span class='vdot' style='background:#c4651b'></span><span><b>Measured</b><br>" + fmt(c.slopeM, 2) + " " + u + "</span></div>" +
-        "<div class='vrow'><span class='vdot' style='background:#1f5fa8'></span><span><b>NASA POWER</b><br>" + fmt(c.slopeP, 2) + " " + u + "</span></div>" +
+        "<div class='vmrow'><span class='vdot' style='background:#c4651b'></span><span><b>Measured</b><br>" + fmt(c.slopeM, 2) + " " + u + "</span></div>" +
+        "<div class='vmrow'><span class='vdot' style='background:#1f5fa8'></span><span><b>NASA POWER</b><br>" + fmt(c.slopeP, 2) + " " + u + "</span></div>" +
         "<div class='vsrc'><b>" + c.label + "</b><br>" + c.src + " · " + y0 + "–" + y1 + (c.note ? "<br>" + c.note : "") + "</div>";
       bts.forEach(function (b, i) { if (b) b.classList.toggle("active", i === cur); });
     }
@@ -1410,7 +1517,7 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
         return "in " + above + " of " + T.cells.length + " cells the average year of 2015–2024 is warmer than the warmest single year of 1981–2000, and in " + over2 + " cells it lies more than two standard deviations above the 1981–2000 mean. In the typical cell " + median(med) + " of the last 10 years were warmer than the warmest year of 1981–2000. In plain words: for a large part of Europe an ordinary recent year would have counted as an extreme year in the 1980s and 1990s. This describes the past; it says nothing about the future."; })() + "</li>" +
       "<li><b>Averages can hide what is felt:</b> counting unusual months (the warmest or coldest 10 % of each calendar month in 1981–2010) shows the change more directly. " + (function () { var H = DS.year.vars.T2M_HOT, C = DS.year.vars.T2M_COLD, W = DS.year.vars.P_WET, n = H.cells.length, mean = function (V, a, b) { var s = 0, k = 0; V.cells.forEach(function (q) { DS.year.meta.years.forEach(function (yy, i) { if (yy >= a && yy <= b && q.a[i] !== null) { s += q.a[i]; k++; } }); }); return s / k; };
         return "Unusually warm months rose from " + f1(mean(H, 1981, 1990), 1) + " per year (1981–1990) to " + f1(mean(H, 2015, 2024), 1) + " (2015–2024, " + f1(mean(H, 2015, 2024) / 1.2) + " times the normal 1.2), cold months fell from " + f1(mean(C, 1981, 1990), 1) + " to " + f1(mean(C, 2015, 2024), 1) + ". Unusually wet months changed in " + W.cells.filter(function (q) { return q.f[0] === 1; }).length + " of " + n + " cells. These are monthly values, not single hot days or heavy-rain events."; })() + "</li>" +
-      "<li><b>What this tool is not:</b> it is an exploration tool for orientation. Cells are about 200–280 km wide, the data are reanalysis and satellite products, and nothing here is a forecast. For a specific site, use station data and the climate services of the national weather service.</li></ul>";
+      "<li><b>What this tool is not:</b> it is an exploration tool for orientation. Cells are about 100–280 km wide, the data are reanalysis and satellite products, and nothing here is a forecast. For a specific site, use station data and the climate services of the national weather service.</li></ul>";
   }
   renderMeaning();
 
@@ -1850,6 +1957,7 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
   }
   function pickCell(c) {
     var q = { lat: c.lat, lon: c.lon };
+    if (!activePreset) document.getElementById("presetnote").hidden = true;   // a "Surprise me" story is about one cell: it goes away when another cell is chosen
     if (!state.cmp && state.sel && !state.sel.region && state.sel.lat === q.lat && state.sel.lon === q.lon) {   // a second click on the selected cell clears the selection
       state.sel = null; renderSel(); renderDetail(); updateCmpUI(); syncSearch(); renderHeadline(); writeHash(); return;
     }
@@ -2417,7 +2525,7 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
     clearPreset(); setSeason("year"); state.variable = st.v; selVar.value = st.v; setView(st.view); state.startIdx = 0; state.fdr = true; fdrBox.checked = true;
     state.sel = { lat: st.c.lat, lon: st.c.lon }; state.sel2 = null; state.cmp = false;
     render(); updateCmpUI();
-    var pn = document.getElementById("presetnote"); pn.hidden = false; pn.innerHTML = st.text;
+    var pn = document.getElementById("presetnote"); pn.hidden = false; decorateNote(pn, st.text, "surprise:" + st.text.slice(0, 40));
     writeHash();
   });
 
@@ -2428,8 +2536,9 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
     if (!g) return; while (g.firstChild) g.removeChild(g.firstChild);
     if (!showTowns) return;
     var z = VB0[2] / vb[2], k = z < 1.6 ? 16 : z < 3 ? 40 : z < 6 ? 110 : 260, fs = 10 / Math.max(1, z * 0.92), placed = [], n = 0;
-    for (var i = 0; i < TOWNS.length && n < k; i++) {
-      var q = TOWNS[i], px = X(q.lon), py = Y(q.lat);
+    var PIN = { Oslo: 1, Stockholm: 1 }, order = TOWNS.filter(function (t) { return PIN[t.n]; }).concat(TOWNS.filter(function (t) { return !PIN[t.n]; }));   // Oslo and Stockholm are used in the cases, so they are always labelled
+    for (var i = 0; i < order.length && n < k; i++) {
+      var q = order[i], px = X(q.lon), py = Y(q.lat);
       if (px < vb[0] || px > vb[0] + vb[2] || py < vb[1] || py > vb[1] + vb[3]) continue;
       var w = q.n.length * fs * 0.56 + 4, box = [px - 1, py - fs, px + w, py + 3], clash = false;
       for (var m = 0; m < placed.length; m++) { var o = placed[m]; if (box[0] < o[2] && box[2] > o[0] && box[1] < o[3] && box[3] > o[1]) { clash = true; break; } }
@@ -2452,7 +2561,8 @@ html[data-theme="dark"] .vside { background:#1d2430; border-color:#2f3a49; } htm
     if (wpTimer) { wpStop(); return; }
     if (state.view !== "trend") return;
     var lo = i0of(state.variable), hi = M.startYears.length - 1; clearPreset();
-    state.startIdx = hi; this.textContent = "❚❚ Pause"; document.getElementById("winplay2").textContent = "❚❚ Pause"; render();
+    if (!(state.startIdx > lo)) state.startIdx = hi;   // resume where it was paused; restart only from the end
+    this.textContent = "❚❚ Pause"; document.getElementById("winplay2").textContent = "❚❚ Pause"; render();
     wpTimer = setInterval(function () { if (state.startIdx <= lo) { wpStop(); return; } state.startIdx -= 1; render(); if (state.startIdx <= lo) wpStop(); }, 380);
   });
 

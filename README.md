@@ -4,6 +4,17 @@
 
 **Live page:** https://schumacherjan-dev.github.io/trend-detective/
 
+![15-second demo: play the time window, click a place, enter a birth year](screenshots/demo.gif)
+
+**Most tools show what changed. Trend Detective shows how long you need to wait before you can trust it.** In the Oslo cell the 10 years 2015–2024 show cooling (−0.27 °C per decade, not significant) while 44 years show +0.31 °C per decade. The page shows, for 315 grid cells over Europe, how many years of NASA POWER data a trend needs before it is significant and stays so. Validation against station data is reported openly, including where it fails (for example German precipitation: r = 0.85 with the stations, but the direction of the trend can differ).
+
+**Experience the 3 key findings in 3 clicks** (every view has its own link):
+1. [The 10-year illusion: Oslo, 2015–2024](https://schumacherjan-dev.github.io/trend-detective/#v=T2M&s=year&view=trend&y=2015&fdr=1&c=60,10) shows cooling, the full 1981–2024 record shows warming.
+2. [Extremes shift faster than averages: unusually hot days](https://schumacherjan-dev.github.io/trend-detective/#v=D_TX90&s=year&view=trend&y=1981&fdr=1) (experimental, modelled daily data).
+3. [Your lifetime: Berlin](https://schumacherjan-dev.github.io/trend-detective/#v=T2M&s=year&view=trend&y=1981&fdr=1&c=52.5,12.5) (or [Hamburg](https://schumacherjan-dev.github.io/trend-detective/#v=T2M&s=year&view=trend&y=1981&fdr=1&c=52.5,10)): in the detail panel enter your birth year under "Your lifetime".
+
+How the data files are made: see "Run it" below (`fetch_cache.py` → `build_data.py` → static `data.js`).
+
 ## Quickstart (for users)
 1. Open the live page (no installation, no account, runs in your browser).
 2. Click one of the "Start with a case" buttons, for example "Warming: how fast is it detectable?".
@@ -128,7 +139,7 @@ Compared with measured country series (Germany DWD, Sweden SMHI, plus Berkeley E
 
 ## Limits
 
-- Reanalysis and satellite products, not direct measurements. Cells are single points about 200–280 km apart; mountains and coasts are smoothed. Not for local decisions: for a site use station data.
+- Reanalysis and satellite products, not direct measurements. Cells are single points about 100–280 km apart; mountains and coasts are smoothed. Not for local decisions: for a site use station data.
 - Only linear trends. The main variables are monthly means; the "unusual months" look at the extremes of the monthly values; the daily extremes are experimental (modelled grid-cell daily values, not validated against stations, and a grid-cell maximum is usually lower than a station's).
 - All windows end in 2024, except the "year of emergence" view (start fixed at 1981, end moving).
 - The FDR correction handles many tests, not the dependence between neighbouring cells. The smallest-detectable-trend and planner estimates assume independent years and are therefore somewhat optimistic.

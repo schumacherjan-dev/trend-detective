@@ -297,3 +297,23 @@ Letzte Aktualisierung: Sa 14.11.2026 (Claude-Chat)
 (53) Time-window slider + Play now visible above the map (#winbar, synced with the When pill; hidden in views without a window). index.html = f54.
 
 (54) Licence check: footer + README + SUBMISSION_TEXTS now list every source with its licence and attribution; Berkeley Earth is CC BY-NC 4.0 (not CC BY), marked as non-commercial. index.html = f55.
+
+(55) Layout D: compact two-column header, map directly under the pill bar, 3 start tiles + "More cases" panel (old case grids), case explanation inside the map card (clamped, Read more), Quick start below the map. Backup archive/index_before_layoutD.html. index.html = f56.
+
+(56) Map B view dropdown: "Warming and rain, side by side"; validation panel rows use own class (.vmrow) so popover row styles no longer apply. index.html = f57.
+
+(57) Quick start moved to the header as a 4-step strip (How it works); detailed Quick start cards remain below the map; strip hidden on phones (<=560 px). index.html = f58.
+
+(58) Daily-extremes variables (D_*) show an "Experimental" chip in the headline above the map in every view/story. index.html = f59, standalone rebuilt.
+
+(59) A "Surprise me" story note is hidden as soon as another cell is clicked (case notes stay). index.html = f60, standalone rebuilt.
+
+(60) Hover frame on a selected cell on map A now has the enlarged size of the selected ("pop") cell. index.html = f61, standalone rebuilt.
+
+(61) Text fixes: Key findings heading above the findings; validation note now names Ireland (3 countries) and the true largest temperature difference (Norway 0.16 C/decade; 8 of 9 within 0.1); cell size "100-280 km" everywhere. index.html = f62, standalone rebuilt.
+
+(62) New section "Who is this for?" (teachers/students -> Oslo case, water managers/farmers -> rain, city planners -> warming; marked as example uses, not tested with real users) between the map and Quick start; buttons run existing cases and scroll to the map. index.html = f63, standalone rebuilt.
+
+(63) "Example uses" (Teachers / Water managers / City planners) moved from a section below the map to three chips in the header; bottom section removed. Oslo and Stockholm are always labelled on the map. index.html = f64, standalone rebuilt.
+
+(64) Back to the "Who is this for?" cards below the map (with explanation); lower Quick start section removed (the 4-step How-it-works strip in the header is the quick start); header chips removed. Oslo/Stockholm labels stay. index.html = f65, standalone rebuilt.

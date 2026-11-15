@@ -11,7 +11,9 @@ Trend Detective is an interactive web page (no server, no login) built on NASA P
 
 The new part is the time dimension of certainty. "Years needed" is the shortest window from which a trend stays significant for every longer window. "Year the trend became detectable" fixes the start in 1981 and moves the end year, so one sees when the signal emerged: for air temperature 20 % of the cells by 2005, 86 % by 2015, 100 % by 2024; for precipitation almost none. A planner turns this around for decision makers: choose the size of change you care about and read how many years of measurement you would need at that place. The smallest detectable trend explains why "not significant" does not mean "no change": for precipitation in the typical cell a trend would have to exceed ±0.096 mm/day per decade to be detected over 44 years, while the typical fitted trend is 0.030.
 
-We validated against measured series (DWD, SMHI, Berkeley Earth) and show where it fails: German precipitation matches in its yearly swings (r = 0.85) but not in the direction of the trend. Robustness checks (autocorrelation, placebo test, start-year test) are reported on the page, together with a list of ideas we tested and deliberately excluded. Nothing on the page is a forecast.
+I validated against measured series (DWD, SMHI, Berkeley Earth) and show where it fails: German precipitation matches in its yearly swings (r = 0.85) but not in the direction of the trend. Robustness checks (autocorrelation, placebo test, start-year test) are reported on the page, together with a list of ideas we tested and deliberately excluded. Nothing on the page is a forecast.
+
+Key numbers: 315 grid cells over Europe, 44 years (1981–2024). Half of the places with a significant temperature trend needed 21 years of data or fewer (northern Europe 21, central Europe 12, southern Europe 10). For rain, a trend in a typical cell must reach ±0.096 mm/day per decade to be detected over 44 years, while the typical fitted trend is only 0.030 mm/day per decade, so a grey rainfall cell does not mean "no change". Experimental daily extremes (modelled, not validated against stations): unusually hot days rise from 28 to 68 per year, significant in 314 of 315 cells, the typical cell needing 27 years. Methods: Theil–Sen slope, Mann–Kendall test, Benjamini–Hochberg FDR correction over cells, autocorrelation check. Data: NASA POWER (MERRA-2, SRB, CERES).
 
 ## How it addresses the challenge
 It examines variables produced by NASA models and satellites (NASA POWER: MERRA-2, SRB, CERES), visualises how they change over time, and determines what is changing, where, how much, and whether the change is significant. It covers several parts of the Earth system (atmosphere, water cycle, land, energy) and shows regional differences, for example opposite signs of the median winter precipitation trend north and south of 45°N, none of them significant.
@@ -36,7 +38,7 @@ The question, the concept and every decision on what to build or to exclude are 
 No unlicensed copyrighted material was used.
 
 ## Demo: 7 slides (maximum)
-1. **Question:** "Most tools show what changed. We show how long you need to wait before you can trust it." One map, one number (315 cells).
+1. **Question:** "Most tools show what changed. I show how long you need to wait before you can trust it." One map, one number (315 cells).
 2. **Why it matters:** Oslo 2015–2024: −0.27 °C per decade (cooling, not significant); 44 years: +0.31. Short windows mislead.
 3. **Data and method:** NASA POWER (MERRA-2, SRB/CERES), Theil–Sen, Mann–Kendall, FDR; Years needed definition in one sentence.
 4. **Finding 1:** Temperature emerges early and everywhere (20 % of cells by 2005, 86 % by 2015); precipitation, soil moisture almost nowhere. Screenshot of the emergence map and the line chart.
