@@ -184,7 +184,7 @@ Reference values for the world and Europe on the page (about 1.4 °C, "twice as 
 
 ## Use of AI
 
-The question, the concept and every decision on what to build or exclude are mine. The code was written with Claude (Anthropic); the concept and plan were partly discussed with another AI assistant. All statements in the text were checked against our own data; claims that the data did not support were removed (see the list above). Where a number appears on the page it is computed from `data.js`.
+The question, the concept and every decision on what to build or exclude are mine. I developed the page together with Claude (Anthropic): Claude wrote the code and helped me refine the concept and the plan, and I decided what to build and what to exclude. I also asked Gemini (Google) some questions about code. All statements in the text were checked against the data; claims that the data did not support were removed (see the list above). Where a number appears on the page it is computed from `data.js`.
 
 ## Author
 

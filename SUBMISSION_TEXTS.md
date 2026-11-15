@@ -19,7 +19,7 @@ Key numbers: 315 grid cells over Europe, 44 years (1981–2024). Half of the pla
 It examines variables produced by NASA models and satellites (NASA POWER: MERRA-2, SRB, CERES), visualises how they change over time, and determines what is changing, where, how much, and whether the change is significant. It covers several parts of the Earth system (atmosphere, water cycle, land, energy) and shows regional differences, for example opposite signs of the median winter precipitation trend north and south of 45°N, none of them significant.
 
 ## Use of Super Intelligence (AI use)
-The question, the concept and every decision on what to build or to exclude are mine. The code was written with Claude (Anthropic), and the concept and plan were partly discussed with another AI assistant. I checked all statements on the page against our own data and removed claims the data did not support. Numbers on the page are computed from the data file; the scripts to rebuild it are in the repository.
+The question, the concept and every decision on what to build or to exclude are mine. I developed the page together with Claude (Anthropic): Claude wrote the code and helped me refine the concept and the plan, and I decided what to build and what to exclude. I also asked Gemini (Google) some questions about code. I checked all statements on the page against the data and removed claims the data did not support. Numbers on the page are computed from the data file; the scripts to rebuild it are in the repository.
 
 ## References (external resources)
 - NASA POWER (Prediction Of Worldwide Energy Resources), monthly point data, https://power.larc.nasa.gov (open NASA data; acknowledgement: data obtained from the NASA Langley Research Center (LaRC) POWER Project funded through the NASA Earth Science/Applied Science Program)
@@ -34,7 +34,7 @@ The question, the concept and every decision on what to build or to exclude are 
 - GeoNames place names (CC BY 4.0)
 - Python libraries NumPy, pandas, SciPy (BSD licences)
 - Statistical methods: Theil–Sen estimator, Mann–Kendall test, Benjamini–Hochberg procedure
-- AI assistants: Claude (Anthropic) for code; another AI assistant for concept discussion
+- AI assistants: Claude (Anthropic) for code and for refining concept and plan; Gemini (Google) for some questions about code
 No unlicensed copyrighted material was used.
 
 ## Demo: 7 slides (maximum)
