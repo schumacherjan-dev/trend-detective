@@ -1,10 +1,10 @@
 # Trend Detective
 
-![Years needed for a significant warming trend across Europe](screenshots/map_years_needed.png)
+![Years needed for a significant warming trend across Europe](map_years_needed.png)
 
 **Live page:** https://schumacherjan-dev.github.io/trend-detective/
 
-![15-second demo: play the time window, click a place, enter a birth year](screenshots/demo.gif)
+![15-second demo: play the time window, click a place, enter a birth year](demo.gif)
 
 **Most tools show what changed. Trend Detective shows how long you need to wait before you can trust it.** In the Oslo cell the 10 years 2015–2024 show cooling (−0.27 °C per decade, not significant) while 44 years show +0.31 °C per decade. The page shows, for 315 grid cells over Europe, how many years of NASA POWER data a trend needs before it is significant and stays so. Validation against station data is reported openly, including where it fails (for example German precipitation: r = 0.85 with the stations, but the direction of the trend can differ).
 
@@ -24,7 +24,7 @@ How the data files are made: see "Run it" below (`fetch_cache.py` → `build_dat
 
 | Trend per decade | Year the trend became detectable |
 |---|---|
-| ![](screenshots/map_trend.png) | ![](screenshots/map_emergence.png) |
+| ![](map_trend.png) | ![](map_emergence.png) |
 
 ## License
 Code: MIT (see LICENSE). The data files keep the licences of their sources (see "Data, licences and references"): this applies in particular to the Berkeley Earth file, which is CC BY-NC 4.0 and not covered by the MIT licence.
